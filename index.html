@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="imagenes/neko.png" type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>CARRUSELL ADMINISTRADO/RA</title>
+</head>
+
+<body class="w-full xl:w-4/5 mx-auto bg-linear-to-r from-pink-400 to-pink-300 p-4 sm:p-6">
+
+  <header class="bg-[url(imagenes/retulo.png)] bg-[length:100%_100%] bg-center bg-no-repeat
+   mb-8 border-dashed border-[3px] border-pink-800 rounded-3xl
+   mt-1 overflow-hidden flex items-center justify-center 
+    min-h-[80px] py-4 px-4 sm:border-8 sm:py-10 md:py-16 lg:w-full lg:min-h-[150px] 
+    lg:rounded-[60px] lg:min-h-[200px] lg:py-24 lg:w-[98%] lg:max-w-[1800px] mx-auto xl:py-24 2xl:py-28">
+
+    <h1 class="text-center text-pink-700 font-black [-webkit-text-stroke:2px_white] 
+               text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-7xl xl:whitespace-nowrap">
+      CARRUSELL ACTUALIZADO
+    </h1>
+  </header>
+
+  <nav class="flex flex-col font-bold mb-10 sm:flex sm:flex-row sm:items-center sm:justify-center sm:gap-4 sm:mb-5 sm:mt-5">
+    
+    <button id="agre" class="text-xl text-pink-700 border-2 rounded-3xl border-pink-700 border-solid px-1
+     cursor-pointer hover:text-white relative z-10 transition-colors 
+      hover:bg-linear-to-r hover:from-pink-600 hover:to-pink-400
+       sm:px-3 sm:py-1 sm:mt-2 sm:mb-16"
+       type="button">Agregar</button>
+
+    <button id="dev" class="text-xl text-pink-700 border-2 mt-2 rounded-3xl px-3 py-1 border-pink-700 border-solid
+      cursor-pointer hover:text-white relative z-10 transition-colors hover:bg-linear-to-r hover:from-pink-600 hover:to-pink-400 
+      sm:px-3 sm:py-1 sm:mb-16" type="button">Devolver</button>
+
+    <button id="mod" class="text-xl text-pink-700 border-2 mt-2 rounded-3xl px-3 py-1 border-pink-700 border-solid 
+      cursor-pointer hover:text-white relative z-10 transition-colors hover:bg-linear-to-r hover:from-pink-600 hover:to-pink-400 
+      sm:px-3 sm:py-1 sm:mb-16" 
+       type="button">Modificar datos</button>
+
+    <button id="elim" class="text-xl text-pink-700 border-2 mt-2 rounded-3xl px-3 py-1 border-pink-700 border-solid
+      cursor-pointer hover:text-white relative z-10 transition-colors hover:bg-linear-to-r hover:from-pink-600 hover:to-pink-400 
+          sm:px-3 sm:py-1 sm:mb-16"
+      type="button">Eliminar</button>  
+
+  </nav>
+
+  <main class="w-full flex justify-center">
+
+    <div class="w-full md:w-11/12 lg:w-4/5 xl:w-11/12 2xl:w-3/4 border-4 sm:border-8 border-dashed
+     bg-linear-to-r from-pink-500 to-pink-300 border-pink-600 
+    rounded-3xl py-6 px-4 sm:px-8 mb-7">
+
+      <div class="mb-6">
+        <div class="flex items-center justify-center sm:flex sm:items-center sm:justify-center sm:gap-3 mb-4">
+          <button id="auto" class="hover:scale-110 transition-transform" type="button"> 
+            <span class="text-pink-600 text-2xl sm:text-3xl cursor-pointer"> ▶︎ </span>
+          </button>
+          
+          <h2 class="text-pink-600 font-bold text-2xl sm:text-3xl md:text-4xl text-center" id="nombre"></h2>
+        </div>
+
+        <div class="text-center text-white text-sm sm:text-base px-2 sm:px-6" id="descripcion"></div>
+      </div>
+      <div class="text-center text-white text-sm sm:text-base px-2 sm:px-6" id="caracteristica"></div>
+
+      <div class="flex flex-col justify-center items-center sm:flex-row sm:justify-center sm:items-center gap-4">
+        
+        <div class="flex flex-row sm:flex sm:flex-row gap-4">
+          <button id="inicio" class="text-3xl sm:text-4xl text-pink-700 cursor-pointer hover:text-white relative z-10 transition-colors" 
+          type="button">«</button>
+          <button id="retroceder" class="text-3xl sm:text-4xl text-pink-700 cursor-pointer hover:text-white relative z-10 transition-colors"
+           type="button">‹</button>
+        </div>
+
+        <div class="w-full max-w-3xl xl:max-w-4xl 2xl:max-w-4xl overflow-hidden rounded-lg border border-pink-500 border-2">
+          <img id="imagen" src="imagenes/gi.png" alt="Paisaje" class="w-full h-64 sm:h-80 md:h-96 xl:h-[450px] 2xl:h-[450px] object-cover" />
+        </div>
+
+        <div class="flex flex-row sm:flex sm:flex-row gap-4">
+          <button id="avanzar" class="text-3xl sm:text-4xl text-pink-700 cursor-pointer hover:text-white relative z-10 transition-colors" 
+          type="button">›</button>
+          <button id="final" class="text-3xl sm:text-4xl text-pink-700 cursor-pointer hover:text-white relative z-10 transition-colors"
+           type="button">»</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="js/clase-ciudad.js"></script>
+  <script src="js/datos.js"></script>
+  <script src="js/carrusell.js"></script>
+</body>
+
+</html>
